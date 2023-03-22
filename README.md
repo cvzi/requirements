@@ -1,15 +1,23 @@
-# requirements
+# requirements.py
 Find updates for packages in requirements.txt on pypi
-
-## Usage
-
-Run `requirements.py` in a folder that contains a `requirements.txt`
-
-Or run `requirements.py path/to/first/requirements.txt path/to/second/requirements.txt`
 
 ![Screenrecord](https://github.com/cvzi/requirements/raw/screenshots/video.png)
 
-Once installed the module can be used directly with `requirements` or `python -m requirements`.
+## Usage
+
+You can use the file [requirements.py](https://github.com/cvzi/requirements/blob/main/requirements/requirements.py), simply
+run `requirements.py` in a folder that contains a `requirements.txt`
+
+Or run `requirements.py path/to/first/requirements.txt path/to/second/requirements.txt`
+
+
+You can also install the module with its dependencies from [pypi.org](https://pypi.org/project/requirements.py/):
+
+```sh
+pip install requirements.py
+```
+
+Once installed the module can be used directly with `python -m requirements` or the command `requirements`.
 
 It also offers some functions to query pypi and requirements.txt programmatically:
 
