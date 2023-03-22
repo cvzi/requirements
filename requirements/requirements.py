@@ -23,6 +23,7 @@ __all__ = ["check_files", "verbose", "parse",
            "parse_file", "parse_line", "get_versions"]
 
 import sys
+import logging
 import subprocess
 import re
 import tokenize
@@ -91,7 +92,10 @@ def get_versions(pkg_name):
         text = r.stdout.split("Available versions:")[1].split("\n")[0].strip()
         CACHE[pkg_name] = []
         for v in text.split(", "):
-            CACHE[pkg_name].append(packaging.version.parse(v))
+            try:
+                CACHE[pkg_name].append(packaging.version.parse(v))
+            except packaging.version.InvalidVersion as e:
+                logging.warning('Invalid version', exc_info=e)
     return CACHE[pkg_name]
 
 
