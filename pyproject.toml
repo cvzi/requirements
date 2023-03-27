@@ -30,6 +30,9 @@ content-type = "text/markdown"
 [project.urls]
 Homepage = "https://github.com/cvzi/requirements"
 
+[project.scripts]
+requirements = "requirements.__main__:main"
+
 [project.optional-dependencies]
 testing = ["pytest"]
 
