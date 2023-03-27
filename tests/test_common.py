@@ -7,7 +7,7 @@ import requirements
 
 
 requirements_test_file = os.path.join(
-    os.path.dirname(__file__), "requirements_test.txt")
+    os.path.dirname(__file__), "test.file")
 
 
 def test_valid_line():
