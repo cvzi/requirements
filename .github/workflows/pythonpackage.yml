@@ -51,4 +51,4 @@ jobs:
     - name: Test run
       run: |
         cd dist
-        python -m requirements ../tests/requirements_test.txt
+        python -m requirements ../tests/test.file
