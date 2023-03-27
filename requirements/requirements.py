@@ -105,7 +105,7 @@ def check_files(filenames=None, verbose=False):
     Returns a dictionary with the current version, available
     versions and the clause (>=, ==, ...) for each package name"""
 
-    if filenames is None:
+    if not filenames:
         filenames = ["requirements.txt"]
     elif isinstance(filenames, str):
         filenames = [filenames]
